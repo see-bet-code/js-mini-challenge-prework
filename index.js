@@ -216,19 +216,19 @@ const newLine = []
 
 function ticketNumberGeneratorFunc(arr) {
   ticketNumber = 0
-  function takeATicketNumber (arr) {
+  function takeATicketNumber(arr) {
     ticketNumber++
     arr.push(ticketNumber)
     return `Welcome. You are ticket number ${ticketNumber}`
   }
-  return takeATicketNumber(arr)
+  return takeATicketNumber
 }
 
 const takeATicketNumberFunc = ticketNumberGeneratorFunc()
-console.log(ticketNumberGeneratorFunc(newLine))
+console.log(takeATicketNumberFunc(newLine))
 // => `Welcome. You are ticket number 1`
 
-console.log(ticketNumberGeneratorFunc(newLine))
+console.log(takeATicketNumberFunc(newLine))
 // => `Welcome. You are ticket number 2`
 
 console.log(nowServing(newLine))
